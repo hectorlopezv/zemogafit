@@ -8,7 +8,7 @@ RUN npm ci --only=production
 
 # Rebuild source coude when cache changes
 FROM node:17.2.0-alpine AS build
-WORKDIR /app
+WORKDIR ./app
 COPY . .
 COPY --from=setup /app/node_modules ./node_modules
 RUN npm run build
@@ -16,7 +16,7 @@ RUN npm run build
 
 # Result Image, and put command to run nextjs
 FROM node:17.2.0-alpine AS runner
-WORKDIR /app
+WORKDIR ./app
 
 ENV NODE_ENV production
 
