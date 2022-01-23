@@ -24,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          file: ./DockerFile
+          file: ./Dockerfile
           context: .
           tags: user/app:latest
       - name: Image digest
