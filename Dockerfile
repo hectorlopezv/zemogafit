@@ -1,5 +1,5 @@
 # Init/Set up Step
-FROM node:17-alpine AS setup
+FROM node:latest AS setup
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY  --chown=node:node package.json package-lock.json ./
@@ -7,7 +7,7 @@ RUN npm ci --only=production
 
 
 # Rebuild source coude when cache changes
-FROM node:17-alpine AS build
+FROM node:latest AS build
 WORKDIR /app
 COPY . .
 COPY --from=setup /app/node_modules ./node_modules
@@ -15,7 +15,7 @@ RUN npm run build
 
 
 # Result Image, and put command to run nextjs
-FROM node:17-alpine AS runner
+FROM node:latest AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
