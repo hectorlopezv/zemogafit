@@ -1,18 +1,20 @@
-# Get NPM packages
-FROM node:17-alpine AS dependencies
+# Init/Set up Step
+FROM node:17-alpine AS setup
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY --chown=node:node ./package*.json ./
 RUN npm ci --only=production
 
-# Rebuild the source code only when needed
-FROM node:17-alpine AS builder
+
+# Rebuild source coude when cache changes
+FROM node:17-alpine AS build
 WORKDIR /app
 COPY . .
-COPY --from=dependencies /app/node_modules ./node_modules
+COPY --from=setup /app/node_modules ./node_modules
 RUN npm run build
 
-# Production image, copy all the files and run next
+
+# Result Image, and put command to run nextjs
 FROM node:17-alpine AS runner
 WORKDIR /app
 
@@ -21,9 +23,9 @@ ENV NODE_ENV production
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY --from=build --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/package.json ./package.json
 
 USER nextjs
 EXPOSE 3000

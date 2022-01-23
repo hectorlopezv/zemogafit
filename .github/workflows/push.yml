@@ -1,4 +1,4 @@
-name: deploy-ci
+name: deploy-docker-ci
 on:
   push:
     branches:
@@ -26,6 +26,6 @@ jobs:
           context: .
           push: true
           file: ./Dockerfile
-          tags: user/app:latest
+          tags: ${{ github.sha }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
