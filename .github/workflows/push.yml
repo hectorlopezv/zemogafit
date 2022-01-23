@@ -26,7 +26,7 @@ jobs:
           context: .
           push: true
           file: ./Dockerfile
-          tags: user/app:latest
+          tags: hectorvmlopez/app:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
