@@ -2,7 +2,7 @@
 FROM node:17-alpine AS setup
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY --chown=node:node ./package*.json ./
+COPY  --chown=node:node package.json package-lock.json ./
 RUN npm ci --only=production
 
 
