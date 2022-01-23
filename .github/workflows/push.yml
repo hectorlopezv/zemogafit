@@ -26,6 +26,6 @@ jobs:
           context: .
           push: true
           file: ./Dockerfile
-          tags: ${{ env.REGISTRY }}/${{ github.sha }}
+          tags: ghcr.io/${{ github.sha }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
