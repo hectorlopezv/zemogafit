@@ -2,7 +2,7 @@ name: deploy-docker-ci
 on:
   push:
     branches:
-      - dev
+      - main
 jobs:
   main:
     name: deploy to cluster
