@@ -1,0 +1,26 @@
+const path = require("path");
+module.exports = {
+  rootDir: path.join(__dirname, ".."),
+  displayName: "prettier",
+  runner: "jest-runner-prettier",
+  moduleFileExtensions: [
+    "js",
+    "mjs",
+    "jsx",
+    "vue",
+    "ts",
+    "tsx",
+    "css",
+    "less",
+    // 'scss',
+    "html",
+    // 'json',
+    "graphql",
+    // 'md',
+    "markdown",
+    "mdx",
+    "yaml",
+    "yml",
+  ],
+  testMatch: ["<rootDir>/components/**/*.js", "<rootDir>/pages/**/*.js"],
+};
