@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "zemogafit",
   "options": {
     "allow-unauthenticated": true,
     "memory": "256Mi",
