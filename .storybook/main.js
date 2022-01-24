@@ -8,7 +8,6 @@ module.exports = {
     builder: 'webpack5',
   },
   webpackFinal: async (config, { configType }) => {
-    // Add Sass to storybook
     config.module.rules.push({
       test: /\.scss$/,
       include: path.resolve(__dirname, '../styles'),
@@ -19,7 +18,7 @@ module.exports = {
         {
           loader: 'css-loader',
           options: {
-            url: false, // This was the important key ** see explanation
+            url: false,
           },
         },
         {
@@ -27,18 +26,6 @@ module.exports = {
         },
       ],
     })
-
-    // Copy all assets to publicPath
-    config.plugins.push(
-      new CopyPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, '../public/assets/img'),
-            to: './img',
-          },
-        ],
-      })
-    )
 
     return config
   },
