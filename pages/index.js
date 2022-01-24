@@ -1,9 +1,9 @@
-import { TEST_URL } from "../constants/routes";
-import React from "react";
+import { TEST_URL } from '../constants/routes'
+import React from 'react'
 
 export default function Home({ data = null }) {
   if (data === null) {
-    return <div>Something went wrong, please try again</div>;
+    return <div>Something went wrong, please try again</div>
   }
   return (
     <div>
@@ -15,31 +15,31 @@ export default function Home({ data = null }) {
                 <h2>{title}</h2>
                 <span>{body}</span>
               </li>
-            );
+            )
           })}
         </ul>
       </main>
     </div>
-  );
+  )
 }
 
 export const getServerSideProps = async () => {
   try {
-    const res = await fetch(TEST_URL);
-    const data = await res.json();
+    const res = await fetch(TEST_URL)
+    const data = await res.json()
 
     if (!data.posts) {
       return {
         props: { notFound: true, data: null },
-      };
+      }
     }
     return {
       props: { data },
-    };
+    }
   } catch (error) {
-    console.log("error", error);
+    console.log('error', error)
     return {
       props: { notFound: true, data: null },
-    };
+    }
   }
-};
+}
