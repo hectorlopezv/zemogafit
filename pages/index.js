@@ -1,10 +1,7 @@
 import { TEST_URL } from '../constants/routes'
 import React from 'react'
 
-export default function Home({ data = null }) {
-  if (data === null) {
-    return <div>Something went wrong, please try again</div>
-  }
+export default function Home() {
   return (
     <>
       <nav className="nav" role="navigation">
