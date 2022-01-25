@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="zemoga thumbsup fit" />
         <meta name="og:description" content="zemoga thumbsup fit" />
+        <meta property="title" content="zemogafit rule of thumb" />
         <meta property="og:title" content="zemogafit rule of thumb" />
         <meta property="og:type" content="website" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
