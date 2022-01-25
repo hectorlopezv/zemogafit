@@ -1,12 +1,11 @@
 import '../styles/globals.scss'
-import { RecoilRoot } from 'recoil'
 import Head from 'next/head'
 if (process.env.NEXT_PUBLIC_REQUEST_MOCK === 'enabled') {
   require('../testUtils/mswEntry')
 }
 function MyApp({ Component, pageProps }) {
   return (
-    <RecoilRoot>
+    <>
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         <title>Rule of Thumb</title>
       </Head>
       <Component {...pageProps} />
-    </RecoilRoot>
+    </>
   )
 }
 
