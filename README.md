@@ -4,8 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## SEO Score Mobile/Desktop
 
-![Mobile Seo](https://drive.google.com/file/d/1H6c-wXAukAYNVLUpA2bufAsqoXVz_B5d/view?usp=sharing)
-![Desktop Seo](https://drive.google.com/file/d/1wln-87TaWFmQv1QOelt_FKCmfWGi1Ymt/view?usp=sharing)
+![Mobile Seo](hhttps://drive.google.com/uc?export=view&id=wXAukAYNVLUpA2bufAsqoXVz_B5d)
+![Desktop Seo](https://drive.google.com/uc?export=view&id=87TaWFmQv1QOelt_FKCmfWGi1Ymt)
+
 First, run the development server:
 
 ```bash
