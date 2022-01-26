@@ -8,9 +8,6 @@
     "lint": "next lint",
     "test:watch": "jest --config ./jest.config.js --watch --maxWorkers 2",
     "test": "jest --config ./jest.config.js --maxWorkers 2",
-    "cypress": "cypress open",
-    "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook -s ./public",
     "prepare": "husky install"
   },
   "engines": {
@@ -35,13 +32,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
-    "@storybook/addon-actions": "^6.4.14",
-    "@storybook/addon-essentials": "^6.4.14",
-    "@storybook/addon-links": "^6.4.14",
-    "@storybook/builder-webpack5": "^6.4.14",
-    "@storybook/manager-webpack5": "^6.4.14",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.4.14",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "autoprefixer": "^10.4.2",

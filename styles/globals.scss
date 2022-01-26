@@ -1,11 +1,11 @@
-@use './constants.scss';
-@use './navBar.scss';
-@use './footer.scss';
-@use './closing.scss';
-@use './banner.scss';
-@use './card.scss';
-@use './header.scss';
-@use './icon.scss';
+@import './constants.scss';
+@import './navBar.scss';
+@import './footer.scss';
+@import './closing.scss';
+@import './banner.scss';
+@import './card.scss';
+@import './header.scss';
+@import './icon.scss';
 html,
 body {
   width: 100%;
@@ -82,4 +82,3 @@ main h2 {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
