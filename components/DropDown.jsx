@@ -63,12 +63,12 @@ const DropDown = ({ setisOpen, setselected, selected, isOpen }) => {
       </button>
       {!!isOpen && (
         <div className="absolute right-0 mt-3 bg-gray-100 border-2 border-black divide-y-2 divide-black shadow-xl w-44">
-          <div className="py-2 text-center" onClick={() => optionHandler(LIST)}>
+          <button className="py-2 text-center block w-full" onClick={() => optionHandler(LIST)}>
             List
-          </div>
-          <div className="py-2 text-center" onClick={() => optionHandler(GRID)}>
+          </button>
+          <button className="py-2 text-center block w-full" onClick={() => optionHandler(GRID)}>
             Grid
-          </div>
+          </button>
         </div>
       )}
     </div>

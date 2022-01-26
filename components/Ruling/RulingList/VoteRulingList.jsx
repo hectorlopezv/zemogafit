@@ -48,19 +48,23 @@ const VoteRulingList = ({
         aria-label="thumbs vote container"
       >
         <div className="flex self-end md:self-center">
-          <div
+          <button
             className={`bg-green-400 px-2 py-3 mr-3 min-w-max 
         transition-all duration-75 hover:bg-green-700 
         cursor-pointer active:scale-125  ${typeOfLike === VOTEUP ? 'scale-125' : ''}`}
             onClick={thumUpHandler}
+            aria-label="vote up list"
+            data-testid="listdvoteup" 
           >
             <Image className="" src="/assets/img/thumbs-up.svg" height={16} width={16} alt="thumbs up vote selection" />
-          </div>
+          </button>
 
-          <div
+          <button
             className={`bg-yellow-600 transition-all duration-75 hover:bg-yellow-500 
         px-2 py-3 mr-4  min-w-max cursor-pointer active:scale-125   ${typeOfLike === VOTEDOWN ? 'scale-125' : ''}`}
             onClick={thumbDownHandler}
+            aria-label="vote down list"
+            data-testid="listdvotedown" 
           >
             <Image
               className=""
@@ -69,7 +73,7 @@ const VoteRulingList = ({
               height={16}
               width={16}
             />
-          </div>
+          </button>
         </div>
 
         <button

@@ -46,20 +46,24 @@ const VoteRulingGrid = ({
 
       <div className="flex justify-end w-full pl-11 pr-8 mt-5 mb-6" aria-label="thumbs vote container">
         <div className="flex self-end h-[90%]">
-          <div
+          <button
             className={`bg-green-400 px-2 py-3 mr-3 min-w-max 
             transition-all duration-75 hover:bg-green-700 cursor-pointer 
              ${typeOfLike === VOTEUP ? 'scale-125' : ''}`}
             onClick={thumUpHandler}
+            aria-label="vote up grid"
+            data-testid="gridvoteup" 
           >
             <Image className="" src="/assets/img/thumbs-up.svg" height={16} width={16} alt="thumbs up vote selection" />
-          </div>
+          </button>
 
-          <div
+          <button
             className={`bg-yellow-600 transition-all duration-75 hover:bg-yellow-500 px-2 py-3 mr-4  min-w-max cursor-pointer  ${
               typeOfLike === VOTEDOWN ? 'scale-125' : ''
             }`}
             onClick={thumbDownHandler}
+            aria-label="vote down grid"
+            data-testid="gridvotedown" 
           >
             <Image
               className=""
@@ -68,7 +72,7 @@ const VoteRulingGrid = ({
               height={16}
               width={16}
             />
-          </div>
+          </button>
         </div>
 
         <button
