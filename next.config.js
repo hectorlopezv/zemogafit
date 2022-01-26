@@ -4,7 +4,7 @@
 
 module.exports = {
   reactStrictMode: true,
-  //productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: true,
 
   //security headers nextjs
   // async headers() {
