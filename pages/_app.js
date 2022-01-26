@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="zemoga thumbsup fit" />
         <meta name="og:description" content="zemoga thumbsup fit" />
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/1411138632/ZemogaLogo__400x400.png" />
-        <title>Rule of Thumb</title>
+        <title>Zemoga Fit Thumbs</title>
       </Head>
       <Component {...pageProps} />
     </>

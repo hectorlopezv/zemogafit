@@ -25,12 +25,12 @@ const RulingListMap = props => {
   const thumUpHandler = useCallback(() => {
     settypeOfLike(VOTEUP)
     setisDisabled(false)
-  }, [typeOfLike, isDisabled])
+  }, [])
 
   const thumbDownHandler = useCallback(() => {
     settypeOfLike(VOTEDOWN)
     setisDisabled(false)
-  }, [typeOfLike, isDisabled])
+  }, [])
   const voteDownHandler = useCallback(async () => {
     if (voteSubmited) {
       settypeOfLike(null)
@@ -46,7 +46,7 @@ const RulingListMap = props => {
     setvoteSubmited(current => !current)
 
     await addData(props)
-  }, [typeOfLike, isDisabled, positiveVotesCount, negativeVotesCount])
+  }, [typeOfLike, props, voteSubmited])
   return (
     <div className="w-96 h-96 flex-shrink-0 relative z-[2] md:w-full md:h-[16rem]">
       <BackgroundList picture={picture} />

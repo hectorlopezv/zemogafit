@@ -1,10 +1,11 @@
 import { formatDistanceToNow } from 'date-fns'
+import Image from 'next/image'
 const RulingListContent = ({ voteSubmited, lastUpdated, category, name }) => {
   return (
     <div className="flex w-full pt-10 md:pt-0 md:justify-between">
       <div className="flex items-end md:items-baseline pb-2 min-w-max" aria-label="thumbs up">
         <div className="bg-green-400 p-2">
-          <img className="h-4" src="/assets/img/thumbs-up.svg" alt="thumbs up" />
+          <Image className="h-4" src="/assets/img/thumbs-up.svg"  height={16} width={16}  alt="thumbs up" />
         </div>
       </div>
       <h3 className="ml-2 text-4xl  text-white break-words line-clamp-2 w-8/12  md:pt-3 lg:pt-6">{name}</h3>

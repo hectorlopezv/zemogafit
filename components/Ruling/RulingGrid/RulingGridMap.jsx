@@ -24,12 +24,12 @@ const RulingGridMap = props => {
   const thumUpHandler = useCallback(() => {
     settypeOfLike(VOTEUP)
     setisDisabled(false)
-  }, [typeOfLike, isDisabled])
+  }, [])
 
   const thumbDownHandler = useCallback(() => {
     settypeOfLike(VOTEDOWN)
     setisDisabled(false)
-  }, [typeOfLike, isDisabled])
+  }, [])
   const voteDownHandler = useCallback(async () => {
     if (voteSubmited) {
       settypeOfLike(null)
@@ -45,7 +45,7 @@ const RulingGridMap = props => {
     setvoteSubmited(current => !current)
 
     await addData(props)
-  }, [typeOfLike, isDisabled, positiveVotesCount, negativeVotesCount])
+  }, [typeOfLike, props, voteSubmited])
   return (
     <div className="w-96 h-96 flex-shrink-0 relative z-[2] md:flex-shrink md:w-full">
       <BackgroundGrid picture={picture} />

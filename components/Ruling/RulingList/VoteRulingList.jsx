@@ -1,6 +1,8 @@
 import { VOTEUP, VOTEDOWN } from '../../../constants'
 import { memo } from 'react'
 import { formatDistanceToNow } from 'date-fns'
+import Image from 'next/image'
+
 const VoteRulingList = ({
   description,
   lastUpdated,
@@ -40,7 +42,7 @@ const VoteRulingList = ({
         cursor-pointer active:scale-125  ${typeOfLike === VOTEUP ? 'scale-125' : ''}`}
             onClick={thumUpHandler}
           >
-            <img className="" src="/assets/img/thumbs-up.svg" alt="thumbs up vote selection" />
+            <Image className="" src="/assets/img/thumbs-up.svg" height={16} width={16} alt="thumbs up vote selection" />
           </div>
 
           <div
@@ -48,7 +50,13 @@ const VoteRulingList = ({
         px-2 py-3 mr-4  min-w-max cursor-pointer active:scale-125   ${typeOfLike === VOTEDOWN ? 'scale-125' : ''}`}
             onClick={thumbDownHandler}
           >
-            <img className="" src="/assets/img/thumbs-down.svg" alt="thumbs down vote selection" />
+            <Image
+              className=""
+              src="/assets/img/thumbs-down.svg"
+              alt="thumbs down vote selection"
+              height={16}
+              width={16}
+            />
           </div>
         </div>
 

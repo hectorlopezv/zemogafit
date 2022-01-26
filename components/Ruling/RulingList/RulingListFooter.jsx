@@ -1,6 +1,6 @@
 import { negativeVotes, positivesVotes } from '../../../utils'
 import { LikesPercentages } from './styles'
-
+import Image from 'next/image'
 const RulingGridFooter = ({ positiveVotesCount, negativeVotesCount }) => {
   return (
     <div className="flex w-full items-center">
@@ -9,7 +9,7 @@ const RulingGridFooter = ({ positiveVotesCount, negativeVotesCount }) => {
         percent={positivesVotes(positiveVotesCount, negativeVotesCount) / 100}
       >
         <div className="flex justify-center items-center mb-1 ">
-          <img className="h-4" src="/assets/img/thumbs-up.svg" alt="thumbs up vote selection" />
+          <Image className="h-4" src="/assets/img/thumbs-up.svg" height={16} width={16} alt="thumbs up vote selection" />
         </div>
         <span className="ml-2 text-white text-lg">{`${positivesVotes(positiveVotesCount, negativeVotesCount).toFixed(
           1
@@ -24,7 +24,7 @@ const RulingGridFooter = ({ positiveVotesCount, negativeVotesCount }) => {
           1
         )}%`}</span>
         <div className="flex justify-center items-center mb-1 min-w-max">
-          <img className="h-4" src="/assets/img/thumbs-down.svg" alt="thumbs down vote selection" />
+          <Image className="h-4" src="/assets/img/thumbs-down.svg" alt="thumbs down vote selection"  height={16} width={16} />
         </div>
       </LikesPercentages>
     </div>

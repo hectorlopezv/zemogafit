@@ -35,6 +35,7 @@ const DropDown = ({ setisOpen, setselected, selected, isOpen }) => {
   return (
     <div className="relative ml-auto z-[3] hidden md:block" ref={ref}>
       <button
+        aria-label="open dropdown"
         className="flex items-center justify-between p-1  bg-gray-100 border-2 border-black rounded-sm w-44"
         onClick={() => setisOpen(current => !current)}
       >
