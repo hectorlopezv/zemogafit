@@ -1,6 +1,10 @@
 import { negativeVotes, positivesVotes } from '../../../utils'
 import { LikesPercentages } from './styles'
 import Image from 'next/image'
+/**
+ * Like and Dislike Bar For Thumb Post List Layout
+ * @returns {ReactNode}
+ */
 const RulingGridFooter = ({ positiveVotesCount, negativeVotesCount }) => {
   return (
     <div className="flex w-full items-center">

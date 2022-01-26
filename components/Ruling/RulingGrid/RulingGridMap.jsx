@@ -6,6 +6,11 @@ import RulingGridFooter from '../RulingList/RulingListFooter'
 import VoteRulingGrid from './VoteRulingGrid'
 import BackgroundGrid from './BackgroundGrid'
 import HeadingGrid from './HeadingGrid'
+
+/**
+ *  Thumb Post Component
+ * @returns {ReactNode}
+ */
 const RulingGridMap = props => {
   const {
     name,

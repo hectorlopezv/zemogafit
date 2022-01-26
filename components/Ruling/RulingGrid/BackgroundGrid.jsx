@@ -1,4 +1,10 @@
 import Image from 'next/image'
+
+/**
+ * Background image Component
+ * @param {string} {picture}
+ * @returns {ReactNode}
+ */
 const BackgroundGrid = ({ picture }) => {
   return (
     <>

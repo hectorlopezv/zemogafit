@@ -3,6 +3,12 @@ import { memo, useState } from 'react'
 import RulingGrid from './Ruling/RulingGrid/RulingGrid'
 import RulingList from './Ruling/RulingList/RulingList'
 
+/**
+ * Component for Displaying Grid or List view for thumbs posts
+ * @param {Thumbs Posts} cards
+ * @param {string} selected
+ * @returns {ReactNode}
+ */
 const CardMap = ({ cards, selected }) => {
   const [isGridMounted, setisGridMounted] = useState(false)
   const [isListMounted, setisListMounted] = useState(true)

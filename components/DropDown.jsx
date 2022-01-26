@@ -2,6 +2,14 @@ import { LIST, GRID } from '../constants'
 import { useEffect, memo } from 'react'
 import { useRef } from 'react'
 
+/**
+ * DropDown component for choosing beetween Grid or List view for Thumbs Posts
+ * @param {boolean} setisOpen
+ * @param {fn} setselected
+ * @param {string} selected
+ * @param {boolean} isOpen
+ * @returns {ReactNode}
+ */
 const DropDown = ({ setisOpen, setselected, selected, isOpen }) => {
   const ref = useRef(null)
 

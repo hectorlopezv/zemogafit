@@ -1,4 +1,9 @@
 import Image from 'next/image'
+/**
+ * Background image Component
+ * @param {string} {picture}
+ * @returns {ReactNode}
+ */
 const BackgroundList = ({ picture }) => {
   return (
     <>
@@ -7,7 +12,7 @@ const BackgroundList = ({ picture }) => {
         className="absolute h-full w-full z-[1] md:left-0 md:w-[19rem]"
         src={`/assets/img/${picture}`}
         alt="backgroundImage List Ruling"
-        layout='fill'
+        layout="fill"
       />
     </>
   )

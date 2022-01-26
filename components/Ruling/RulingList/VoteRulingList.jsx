@@ -2,7 +2,19 @@ import { VOTEUP, VOTEDOWN } from '../../../constants'
 import { memo } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import Image from 'next/image'
-
+/**
+ * Vote Component Handler List Layout
+ * @param {string} {description
+ * @param {string} lastUpdated
+ * @param {string} voteSubmited
+ * @param {string} category
+ * @param {string} typeOfLike
+ * @param {boolean} isDisabled
+ * @param {fn} voteDownHandler
+ * @param {fn} thumbDownHandler
+ * @param {fn} thumUpHandler
+ * @returns {ReactNode}
+ */
 const VoteRulingList = ({
   description,
   lastUpdated,

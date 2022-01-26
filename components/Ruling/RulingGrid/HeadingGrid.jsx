@@ -1,4 +1,9 @@
 import Image from 'next/image'
+/**
+ * Heading for Thumb Post
+ * @param {string} {name}
+ * @returns {ReactNode}
+ */
 const HeadingGrid = ({ name }) => {
   return (
     <div className="flex w-full pt-10 lg:pt-20">
